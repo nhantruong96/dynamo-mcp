@@ -48,7 +48,8 @@ namespace DynamoMcp.Commands
                     var e = tcs.Task.Result;
                     result["evaluationTookPlace"] = e.EvaluationTookPlace;
                     result["succeeded"] = e.EvaluationSucceeded;
-                    result["error"] = e.Error?.Message;
+                    // EvaluationCompletedEventArgs.Error throws when the evaluation succeeded.
+                    result["error"] = e.EvaluationSucceeded ? null : e.Error?.Message;
                 }
                 else
                 {

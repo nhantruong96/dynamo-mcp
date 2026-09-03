@@ -46,14 +46,16 @@ Revit 2027 (override with `-DynamoDir "C:\path\to\DynamoForRevit"`) and copies t
 user-level Dynamo package to
 
 ```
-%AppData%\Dynamo\Dynamo Revit\4.1\packages\DynamoMCP\
+%AppData%\Dynamo\Dynamo Revit\27.0\packages\DynamoMCP\
 ├── pkg.json
 ├── bin\DynamoMcpExtension.dll
 └── extra\DynamoMcp_ViewExtensionDefinition.xml
 ```
 
-No admin rights are needed. Dynamo loads `*_ViewExtensionDefinition.xml` files found in a package's
-`extra` folder. Restart Dynamo; the **Extensions** menu shows `Dynamo MCP: ON (127.0.0.1:8555)`.
+Dynamo for Revit names this folder after the Revit release (`27.0` for Revit 2027, `26.0` for
+Revit 2026), while Dynamo Sandbox uses the Dynamo version (`4.1`); pass `-DynamoVersion` and
+`-HostName` to the script accordingly. No admin rights are needed. Dynamo loads
+`*_ViewExtensionDefinition.xml` files found in a package's `extra` folder. Restart Dynamo; the **Extensions** menu shows `Dynamo MCP: ON (127.0.0.1:8555)`.
 Click the item to stop/start the bridge. The extension writes a log to
 `%LocalAppData%\DynamoMCP\extension.log`.
 

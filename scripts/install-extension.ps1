@@ -2,12 +2,15 @@
 # (no admin rights needed). Dynamo loads *_ViewExtensionDefinition.xml files found in a
 # package's "extra" folder.
 #
-#   .\scripts\install-extension.ps1                            # Dynamo for Revit 4.1 (Revit 2027)
-#   .\scripts\install-extension.ps1 -DynamoVersion 3.4         # another Dynamo minor version
-#   .\scripts\install-extension.ps1 -HostName "Dynamo Core"    # Dynamo Sandbox
+# Dynamo for Revit names its user folder after the Revit release ("27.0" for Revit 2027);
+# Dynamo Sandbox uses the Dynamo version ("4.1").
+#
+#   .\scripts\install-extension.ps1                                      # Revit 2027
+#   .\scripts\install-extension.ps1 -DynamoVersion 26.0                  # Revit 2026
+#   .\scripts\install-extension.ps1 -HostName "Dynamo Core" -DynamoVersion 4.1   # Dynamo Sandbox
 #   .\scripts\install-extension.ps1 -SkipBuild
 param(
-    [string]$DynamoVersion = "4.1",
+    [string]$DynamoVersion = "27.0",
     [string]$HostName = "Dynamo Revit",
     [string]$Configuration = "Release",
     [string]$DynamoDir = "",

@@ -1,0 +1,18 @@
+{
+  "license": "MIT",
+  "file_hash": null,
+  "name": "DynamoMCP",
+  "version": "0.1.0",
+  "description": "Bridges a live Dynamo session to the dynamo-mcp server (Model Context Protocol) over a loopback socket.",
+  "group": "",
+  "keywords": [ "mcp", "ai", "automation" ],
+  "dependencies": [],
+  "contents": "DynamoMCP view extension",
+  "engine_version": "4.1.0",
+  "engine": "dynamo",
+  "engine_metadata": "",
+  "site_url": "https://github.com/nhantruong96/dynamo-mcp",
+  "repository_url": "https://github.com/nhantruong96/dynamo-mcp",
+  "contains_binaries": true,
+  "node_libraries": []
+}

@@ -1,0 +1,4 @@
+<ViewExtensionDefinition>
+  <AssemblyPath>..\bin\DynamoMcpExtension.dll</AssemblyPath>
+  <TypeName>DynamoMcp.DynamoMcpViewExtension</TypeName>
+</ViewExtensionDefinition>

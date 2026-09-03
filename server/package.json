@@ -1,0 +1,45 @@
+{
+  "name": "dynamo-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that connects AI assistants to a live Autodesk Dynamo session through the DynamoMCP view extension",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "dynamo-mcp": "./build/index.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "clean": "rimraf build",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhantruong96/dynamo-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "dynamo",
+    "revit",
+    "autodesk",
+    "claude",
+    "bim"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "rimraf": "^6.0.0",
+    "typescript": "^5.8.0"
+  }
+}

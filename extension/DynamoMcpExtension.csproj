@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Dynamo 4.x (Revit 2027) runs on .NET 10. For Dynamo 3.x (Revit 2025/2026) retarget to net8.0-windows. -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>DynamoMcpExtension</AssemblyName>
+    <RootNamespace>DynamoMcp</RootNamespace>
+    <Version>0.1.0</Version>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <!-- Where the Dynamo assemblies live. Override: dotnet build -p:DynamoDir="C:\path\to\Dynamo" -->
+    <DynamoDir Condition="'$(DynamoDir)' == ''">C:\Program Files\Autodesk\Revit 2027\AddIns\DynamoForRevit</DynamoDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="DynamoCore">
+      <HintPath>$(DynamoDir)\DynamoCore.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DynamoCoreWpf">
+      <HintPath>$(DynamoDir)\DynamoCoreWpf.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DynamoServices">
+      <HintPath>$(DynamoDir)\DynamoServices.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ProtoCore">
+      <HintPath>$(DynamoDir)\ProtoCore.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(DynamoDir)\Newtonsoft.Json.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

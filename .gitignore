@@ -1,0 +1,16 @@
+# Node
+node_modules/
+server/build/
+*.tgz
+
+# .NET
+extension/bin/
+extension/obj/
+dist/
+.vs/
+*.user
+
+# Logs / local settings
+*.log
+.claude/settings.local.json
+.env
